@@ -46,9 +46,15 @@ struct HomeView: View {
                     LazyVStack {
                         Spacer(minLength: 500)
                         TemperatureRow(infos: self.weatherInfo)
+                        WeatherScroll()
                         ThermalSensation(infos: self.weatherInfo)
                         SunAndWind(infos: self.weatherInfo)
+                        AirQuality()
+                        MapCard()
                         Precipitation()
+                        Image("climao")                                  .resizable()
+                            .scaledToFit()
+                            .frame(width:100)
                     }
                 }                
                 .shadow(radius: 10)

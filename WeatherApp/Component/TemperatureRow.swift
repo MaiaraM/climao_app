@@ -30,6 +30,7 @@ struct TemperatureRow: View {
 
                 Text(infos.current.condition.text)
                     .foregroundColor(.white)
+                    .font(.custom("Helvetica Neue Bold", size: 18))
             }
             HStack {
                 IconTextComponent(title: "\(infos.forecast.forecastday[0].day.maxtempC)°", image: "arrow.up")
@@ -40,8 +41,8 @@ struct TemperatureRow: View {
             HStack(alignment: .bottom){
                 Text("\(infos.current.tempC)°")
                     .bold()
+                    .font(.custom("Helvetica Neue", size: 85))
                     .foregroundColor(.white)
-                    .font(.system(size: 85))
                 Spacer()
                 IconTextComponent(title: self.sunrise, image: "sunrise")
                 IconTextComponent(title: self.sunset, image: "sunset")
