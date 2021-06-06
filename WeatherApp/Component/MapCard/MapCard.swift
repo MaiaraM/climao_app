@@ -1,10 +1,3 @@
-//
-//  MapCard.swift
-//  weather_app
-//
-//  Created by Fernando Gabriel Belotto Bosco on 06/06/21.
-//
-
 import SwiftUI
 
 struct MapCard: View {
@@ -16,7 +9,6 @@ struct MapCard: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             MapView().frame(height: 160)
         }.padding(10).background(Color("bg")).cornerRadius(15).padding(10)
-
     }
 }
 

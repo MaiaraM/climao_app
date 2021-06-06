@@ -51,8 +51,6 @@ struct Precipitation: View {
                     .overlay(
                         Image(precipitationLevelsDefinition(prob : preciptationProbability2)).resizable()
                     .scaledToFit().frame(width:30, height: 30)
-                    .padding(0.0)
-                    //.position(CGPoint(x: 40, y: 400))
                     .offset(x:15, y:0)
                     .frame(maxWidth: .infinity))
                     .overlay(
@@ -108,7 +106,7 @@ struct Precipitation: View {
                             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     )
             }
-        }.padding(10).background(Color("bg")).cornerRadius(15).padding(.all, 10).aspectRatio(contentMode: .fit)
+        }.padding(10).background(Color("bg")).cornerRadius(15)
     }
 }
 

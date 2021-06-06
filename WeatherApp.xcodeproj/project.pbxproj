@@ -30,6 +30,7 @@
 		ED72B5CF266D56B500389DC8 /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72B5CC266D56B400389DC8 /* MapCard.swift */; };
 		ED72B5D1266D56C400389DC8 /* WeatherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72B5D0266D56C400389DC8 /* WeatherList.swift */; };
 		ED72B5D3266D56C700389DC8 /* WeatherScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72B5D2266D56C700389DC8 /* WeatherScroll.swift */; };
+		ED72B5DB266D63F700389DC8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72B5DA266D63F700389DC8 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ED72B5CD266D56B400389DC8 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		ED72B5D0266D56C400389DC8 /* WeatherList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherList.swift; sourceTree = "<group>"; };
 		ED72B5D2266D56C700389DC8 /* WeatherScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherScroll.swift; sourceTree = "<group>"; };
+		ED72B5DA266D63F700389DC8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		CA595ACC266B03D300FC860B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED72B5D9266D63E800389DC8 /* Managers */,
 				CA595AEB266B0CED00FC860B /* View */,
 				CA595AE6266B04D000FC860B /* Service */,
 				CA595ADF266B042A00FC860B /* Mock */,
@@ -182,6 +185,14 @@
 			path = MapCard;
 			sourceTree = "<group>";
 		};
+		ED72B5D9266D63E800389DC8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ED72B5DA266D63F700389DC8 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +280,7 @@
 				CA595AE3266B048000FC860B /* WeatherModel.swift in Sources */,
 				CA595ACE266B03D300FC860B /* WeatherAppApp.swift in Sources */,
 				CA595AE8266B04E200FC860B /* WeatherService.swift in Sources */,
+				ED72B5DB266D63F700389DC8 /* LocationManager.swift in Sources */,
 				CA595AE5266B04B300FC860B /* ThermalSensation.swift in Sources */,
 				ED72B5CB266D56AE00389DC8 /* Progress.swift in Sources */,
 				CA7C65DC266C5B570046F604 /* TemperatureRow.swift in Sources */,
@@ -401,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DQT3MVFV5P;
+				DEVELOPMENT_TEAM = J37G76B69X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -423,7 +435,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DQT3MVFV5P;
+				DEVELOPMENT_TEAM = J37G76B69X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

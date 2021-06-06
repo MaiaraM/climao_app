@@ -51,7 +51,9 @@ struct HomeView: View {
                         AirQuality()
                         MapCard()
                         Precipitation()
-
+                        Image("climao")                                  .resizable()
+                            .scaledToFit()
+                            .frame(width:100)
                     }
                 }                
                 .shadow(radius: 10)
