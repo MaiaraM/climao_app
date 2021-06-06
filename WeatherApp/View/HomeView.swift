@@ -47,6 +47,7 @@ struct HomeView: View {
                         Spacer(minLength: 500)
                         TemperatureRow(infos: self.weatherInfo)
                         ThermalSensation(infos: self.weatherInfo)
+                        SunAndWind(infos: self.weatherInfo)
                         Precipitation()
                     }
                 }                
