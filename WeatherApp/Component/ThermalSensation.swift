@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ThermalSensation: View {
+    //MARK: - PROPERTIES
+    
+    var infos:WeatherInfo
+    
+    //MARK: - BODY
     var body: some View {
         VStack(spacing: 10) {
             Text("Detalhes")
@@ -15,15 +20,17 @@ struct ThermalSensation: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
             HStack{
-                Image("sun").resizable()
-                    .scaledToFit().frame(width:60, height: 60)                    .padding(5)
+                Image("sun")
+                    .resizable()
+                    .scaledToFit().frame(width:60, height: 60)
+                    .padding(5)
                     .frame(maxWidth: .infinity)
                 VStack(spacing: 10) {
-                    InfoRow(title: "Sensação Térmica", value: "18C")
-                    InfoRow(title: "Umidade", value: "85%")
-                    InfoRow(title: "Visibilidade", value: "16km")
+                    InfoRow(title: "Sensação Térmica", value: "\(infos.current.feelslikeC)°")
+                    InfoRow(title: "Umidade", value: "\(infos.current.humidity)%")
+                    InfoRow(title: "Visibilidade", value: "\(infos.current.visKM)km")
                     InfoRow(title: "UV Index", value: "Baixo 0")
-                    InfoRowTiny(title: "ponto de condensação", value: "15C")
+                    InfoRowTiny(title: "Ponto de condensação", value: "\(infos.current.gustKph)°")
 
                 }
             }
@@ -34,28 +41,10 @@ struct ThermalSensation: View {
 
 struct ThermalSensation_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalSensation()
+        ThermalSensation(infos: weatherMock)
     }
 }
 
-struct InfoRow: View {
-    var title: String
-    var value: String
-    var body: some View {
-        HStack {
-            Text(title)
-                .font(.system(size: 12))
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Text(value)
-                .font(.system(size: 12))
-                .foregroundColor(.white)
-                .frame(alignment: .trailing)
-
-        }.frame(minWidth: 0,maxWidth: .infinity)
-    }
-    
-}
 
 struct InfoRowTiny: View {
     var title: String
@@ -63,11 +52,11 @@ struct InfoRowTiny: View {
     var body: some View {
         HStack {
             Text(title)
-                .font(.system(size: 9))
+                .font(.system(size: 12))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Text(value)
-                .font(.system(size: 10))
+                .font(.system(size: 12))
                 .foregroundColor(.white)
                 .frame(alignment: .trailing)
 
