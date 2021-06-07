@@ -15,7 +15,7 @@ struct SunAndWind: View {
     var sunset:String
     var sunrise:String
     var animation: Animation {
-        Animation.easeOut(duration: 8)
+        Animation.easeOut(duration: 5)
             .repeatForever(autoreverses: false)
     }
     
@@ -40,6 +40,24 @@ struct SunAndWind: View {
                     .frame(width: .infinity, height: 300)
                     .padding(.horizontal, 10)
                     .rotationEffect(Angle(degrees: 180))
+                Ellipse()
+                    .trim(from: 0.0, to: 0.2)
+                    .stroke(Color.yellow, style: StrokeStyle(lineWidth: 2.0, dash: [5]))
+                    .frame(width: .infinity, height: 300)
+                    .animation(.linear)
+                    .padding(.horizontal, 10)
+                    .rotationEffect(Angle(degrees: 180))
+                
+                
+                HStack(alignment: .center) {
+                    Spacer()
+                    Image("mountain")
+                        .resizable()
+                        .frame(width: 150, height:55, alignment: .trailing)
+                    
+                }
+                .frame(maxWidth:.infinity)
+                
                 HStack{
                     Text(sunrise)
                         .font(.footnote)
@@ -52,14 +70,14 @@ struct SunAndWind: View {
 
                 }
                 .padding(.top, 20)
+
                 HStack{
                     ZStack(alignment: .top){
                         Image("windMill")
                             .resizable()
-                            .frame(width: 50, height:50, alignment: .center)
-
+                            .frame(width: 45, height:45, alignment: .center)
                             .rotationEffect(Angle.degrees(isRotated ? 360 : 0))
-                            //.padding(.bottom,10)
+                            .padding(.horizontal,10)
                             .animation(animation)
 
                         Image("baseWindMill")
@@ -86,9 +104,10 @@ struct SunAndWind: View {
                                 .font(.footnote)
                                 .foregroundColor(.white)
                         }
+                        Spacer()
                     }
+                    .frame(height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
-                
             }
             .frame(height: 200, alignment: .top)
         }.padding(10).background(Color("bg")).cornerRadius(15).padding(10)
